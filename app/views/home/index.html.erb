@@ -1,10 +1,8 @@
-<p style="color: green"><%= notice %></p>
 
-<% if Current.user.present? %>
-    <p>Signed as <%= Current.user.email %></p>
+<div class="page">
+    <h1>Featured rooms</h1>
 
-    <%= button_to "Log out", Current.session, method: :delete %>
-<% else %>
-    <%= link_to "Sign in", sign_in_path %>        
-<% end %>
-
+    <div id="rooms">
+        <%= render @rooms %>
+    </div>
+</div>

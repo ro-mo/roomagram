@@ -11,6 +11,31 @@
   </head>
 
   <body>
+    <p style="color: green"><%= notice %></p>
+    <header class="site-header">
+      <div class="left-items">
+        <%= link_to "Roomagram", root_path, class: "logo" %>
+        <% if Current.user.present? %>
+          <nav>
+            <ul>
+              <li>
+                <%= link_to "My rooms", rooms_path %>
+              </li>
+            </ul>
+          </nav>
+        <% end %>
+      </div>
+      <div class="right-items">
+        <% if Current.user.present? %>
+          <div>Signed as <%= Current.user.email %></div>
+
+          <%= button_to "Log out", Current.session, method: :delete %>
+        <% else %>
+            <%= link_to "Sign in", sign_in_path %>        
+        <% end %>
+      </div>
+      
+    </header>
     <%= yield %>
   </body>
 </html>
