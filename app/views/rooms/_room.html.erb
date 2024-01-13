@@ -1,0 +1,12 @@
+<div id="<%= dom_id room %>" class="room">
+  <h2><%= room.name %></h2>
+
+  <span class="category"><%= room.category %></span>
+
+  <% if room.user != Current.user %>
+    <div><%= room.user.email %></div>
+  <% end %>
+
+  <%= link_to "Visit", room %>
+
+</div>
