@@ -1,0 +1,42 @@
+<%= form_with(model: media_item) do |form| %>
+  <% if media_item.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(media_item.errors.count, "error") %> prohibited this media_item from being saved:</h2>
+
+      <ul>
+        <% media_item.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :x, style: "display: block" %>
+    <%= form.text_field :x %>
+  </div>
+
+  <div>
+    <%= form.label :y, style: "display: block" %>
+    <%= form.text_field :y %>
+  </div>
+
+  <div>
+    <%= form.label :z, style: "display: block" %>
+    <%= form.text_field :z %>
+  </div>
+
+  <div>
+    <%= form.label :item, style: "display: block" %>
+    <%= form.file_field :item %>
+  </div>
+
+  <div>
+    <%= form.label :room_id, style: "display: block" %>
+    <%= form.text_field :room_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

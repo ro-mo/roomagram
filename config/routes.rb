@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :media_items
   resources :rooms
   get  "sign_in", to: "sessions#new"
   post "sign_in", to: "sessions#create"

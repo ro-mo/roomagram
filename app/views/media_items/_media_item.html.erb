@@ -1,0 +1,28 @@
+<div id="<%= dom_id media_item %>">
+  <p>
+    <strong>X:</strong>
+    <%= media_item.x %>
+  </p>
+
+  <p>
+    <strong>Y:</strong>
+    <%= media_item.y %>
+  </p>
+
+  <p>
+    <strong>Z:</strong>
+    <%= media_item.z %>
+  </p>
+
+  <p>
+    <strong>Item:</strong>
+    <%= link_to media_item.item.filename, media_item.item if media_item.item.attached? %>
+    <%= image_tag media_item.item if media_item.item.attached? %>
+  </p>
+
+  <p>
+    <strong>Room:</strong>
+    <%= media_item.room_id %>
+  </p>
+
+</div>
