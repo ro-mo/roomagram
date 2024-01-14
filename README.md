@@ -12,4 +12,7 @@ rvm version used: 1.29.12
 
 sqlite3 version used: 3.39.5
 
-To run the program, make sure to have installed all of the previous programs, then rails server
+
+To run the program, make sure to have installed all of the previous programs, then run 
+
+rails server
