@@ -1,5 +1,6 @@
 # README
-
+To run the program, make sure to have installed all of the previous
+<pre>
 Ruby version used: 3.0.0
 
 npm version used: 10.2.3
@@ -11,8 +12,8 @@ gem version used: 3.2.3
 rvm version used: 1.29.12
 
 sqlite3 version used: 3.39.5
+</pre>
 
+Then run 
 
-To run the program, make sure to have installed all of the previous programs, then run 
-
-rails server
+<pre>rails server</pre>
