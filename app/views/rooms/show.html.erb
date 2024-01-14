@@ -1,6 +1,8 @@
-<%= render @room %>
+<div id="room-info">
+  <%= render @room %>
+</div>
 
-<div>
+<div class="room-actions">
   <%= link_to "Edit this room", edit_room_path(@room) %> |
   <%= link_to "Back to rooms", rooms_path %>
 

@@ -17,6 +17,8 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
 
 ul {
@@ -54,6 +56,15 @@ h1 {
 
         nav {
             margin-left: 8px;
+            border: 2px solid gray;
+            background-color: white;
+            border-radius: 12px;
+            padding: 3px 6px;
+
+            &:hover{
+                border-color: white;
+                background-color: lightgray;
+            }
         }
     }
     .right-items {
@@ -62,6 +73,14 @@ h1 {
 
         button {
             margin-left: 8px;
+            padding: 2px 4px;
+            border-radius: 10px;
+            border: 2px solid gray;
+
+            &:hover{
+                border-color: white;
+                background-color: lightgray;
+            }
         }
     }
 }

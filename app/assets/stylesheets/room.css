@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 8px;
+    margin-bottom: 12px;
 
     .room {
         border: 2px solid gray;
@@ -9,7 +10,7 @@
         padding: 12px 16px;
 
         h2 {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
 
         .category {
@@ -28,5 +29,23 @@
                 text-decoration: underline;
             }
         }
+        .admin{
+            padding-top: 12px;
+        }
+    }
+}
+
+.new-room{
+    color: black;
+    padding: 4px 8px;
+    width: 80px;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid gray;
+
+    &:hover{
+        background-color: grey;
+        border: 2px solid white;
+        color: blue;
     }
 }

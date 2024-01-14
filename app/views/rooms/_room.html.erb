@@ -4,9 +4,12 @@
   <span class="category"><%= room.category %></span>
 
   <% if room.user != Current.user %>
-    <div><%= room.user.email %></div>
+    <div class="admin"><%= room.user.email %></div>
+  <% else %>
+    <div class="admin">Yours</div>
   <% end %>
 
   <%= link_to "Visit", room %>
+  
 
 </div>

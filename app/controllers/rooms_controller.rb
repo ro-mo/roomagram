@@ -68,4 +68,8 @@ class RoomsController < ApplicationController
     def room_params
       params.require(:room).permit(:name, :category)
     end
+
+    def userposition
+      @currentroom = params[:room];
+    end
 end
