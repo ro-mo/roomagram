@@ -1,9 +1,7 @@
 # README
-To run the program, make sure to have installed all of the previous
+To use properly the program, install these settings
 <pre>
 Ruby version used: 3.0.0
-
-npm version used: 10.2.3
 
 Rails version used: 7.1.2
 
