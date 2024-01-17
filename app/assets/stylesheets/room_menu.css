@@ -1,4 +1,31 @@
-#room-info{
+#room-page{
     display: flex;
-    background-color: aqua;
+    justify-content: space-between;
+    align-items: center;
+
+    #room-info{
+        display: grid;
+        padding: 4px 8px;
+        z-index: 99;
+    }
+
+    .room-actions{
+        display: flex;
+        height: 30px;
+        margin-left: 65%;
+        z-index: 99;
+    }
+
+    .action{
+        padding: 4px 8px;
+        border: 2px solid gray;
+        border-radius: 12px;
+        margin-left: 2px;
+        margin-right: 2px;
+
+        &:hover{
+            border-color: white;
+            background-color: lightgray;
+        }
+    }
 }

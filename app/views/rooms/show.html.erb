@@ -1,11 +1,15 @@
-<div id="room-info">
-  <%= render @room %>
-</div>
+<div id="room-page">
+  <div id="room-info">
+    <h2><%= @room.name %></h2>
 
-<div class="room-actions">
-  <%= link_to "Edit this room", edit_room_path(@room) %> |
-  <%= link_to "Back to rooms", rooms_path %>
+    <span class="category"><%= @room.category %></span>
 
-  <%= button_to "Destroy this room", @room, method: :delete %>
+  </div>
+
+  <div class="room-actions">
+    <span class="action"><%= link_to "Edit this room", edit_room_path(@room) %></span>
+    <span class="action"><%= link_to "Back to rooms", rooms_path %></span>
+    <span class="action"><%= link_to "Destroy this room", @room, method: :delete %></span>
+  </div>
 </div>
-<div data-controller="render-room" data-room-id="<%= @room.id %>"></div>
+<div id="scene" data-controller="render-room" data-room-id="<%= @room.id %>"></div>

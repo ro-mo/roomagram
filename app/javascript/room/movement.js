@@ -32,7 +32,7 @@ export function listenersInit() {
 
     } );
 
-    document.addEventListener( 'mousedown', () => {
+    document.getElementsByTagName('canvas')[0].addEventListener( 'mousedown', () => {
 
         if (getInputMode()) return;
 

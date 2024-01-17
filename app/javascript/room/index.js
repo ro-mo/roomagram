@@ -16,11 +16,10 @@ import { gamepadConnected } from "./gamepad.js"
 // let scene;
 
 export function renderRoom(roomId) {
-    console.log("room id:", roomId)
     window.renderer = new THREE.WebGLRenderer();
     window.renderer.setPixelRatio(window.devicePixelRatio);
     window.renderer.setSize( window.innerWidth, window.innerHeight );
-    document.body.appendChild( renderer.domElement );
+    document.body.appendChild( window.renderer.domElement );
     
     const clock = new THREE.Clock();
     window.scene = new THREE.Scene();

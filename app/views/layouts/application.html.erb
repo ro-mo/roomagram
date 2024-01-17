@@ -15,7 +15,7 @@
     <header class="site-header">
       <div class="left-items">
         <%= link_to "Roomagram", root_path, class: "logo" %>
-        <% if Current.user.present? && @currentroom == 'rooms'%>
+        <% if Current.user.present? %>
           <nav>
             <ul>
               <li>
