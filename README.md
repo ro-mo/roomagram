@@ -1,24 +1,17 @@
 # README
+To use properly the program, install these settings
+<pre>
+Ruby version used: 3.0.0
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails version used: 7.1.2
 
-Things you may want to cover:
+gem version used: 3.2.3
 
-* Ruby version
+rvm version used: 1.29.12
 
-* System dependencies
+sqlite3 version used: 3.39.5
+</pre>
 
-* Configuration
+Then run 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<pre>rails server</pre>
