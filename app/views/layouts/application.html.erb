@@ -15,17 +15,17 @@
     <header class="site-header">
       <div class="left-items">
         <%= link_to "Roomagram", root_path, class: "logo" %>
-        <% if Current.user.present? %>
+      </div>
+      <div class="right-items">
+        <% if Current.user.present? && !current_page?(rooms_path)%>
           <nav>
             <ul>
               <li>
-                <%= link_to "My rooms", rooms_path %>
+                <%= button_to "My rooms", rooms_path %>
               </li>
             </ul>
           </nav>
         <% end %>
-      </div>
-      <div class="right-items">
         <% if Current.user.present? %>
           <div>Signed as <%= Current.user.email %></div>
 
