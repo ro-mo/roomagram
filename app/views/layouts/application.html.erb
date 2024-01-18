@@ -17,17 +17,17 @@
         <%= link_to "Roomagram", root_path, class: "logo" %>
       </div>
       <div class="right-items">
-        <% if Current.user.present? && !current_page?(rooms_path)%>
+        <% if Current.user.present? %>
           <nav>
             <ul>
               <li>
-                <%= button_to "My rooms", rooms_path %>
+                <%= link_to "My rooms", rooms_path %>
               </li>
             </ul>
           </nav>
         <% end %>
         <% if Current.user.present? %>
-          <div>Signed as <%= Current.user.email %></div>
+          <div>Signed as <%= Current.user.name %></div>
 
           <%= button_to "Log out", Current.session, method: :delete %>
         <% else %>

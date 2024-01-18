@@ -4,7 +4,7 @@
   <span class="category"><%= room.category %></span>
 
   <% if room.user != Current.user %>
-    <div class="admin"><%= room.user.email %></div>
+    <div class="admin"><%= room.user.name %></div>
   <% else %>
     <div class="admin">Yours</div>
   <% end %>
