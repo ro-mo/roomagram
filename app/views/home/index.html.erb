@@ -1,8 +1,13 @@
-
 <div class="page">
     <h1>Featured rooms</h1>
+    <%= form_with method: :get, data: { turbo_frame: "featured_rooms", turbo_action: "advance" } do |form| %>
+        <%= form.search_field :q, value: params[:q], placeholder: "Search..", oninput: "this.form.requestSubmit()" %>
+        <%= form.select :category,  options_for_select(@categories, params[:category]), { include_blank: "All" }, onchange: "this.form.requestSubmit()" %>   
+    <% end %>
 
-    <div id="rooms">
-        <%= render @rooms %>
-    </div>
+    <%= turbo_frame_tag "featured_rooms" do %>
+        <div id="rooms">
+            <%= render @rooms %>
+        </div>
+    <% end %>
 </div>
