@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :profiles, only: [:show]
   resources :media_items
   resources :rooms
   get  "sign_in", to: "sessions#new"

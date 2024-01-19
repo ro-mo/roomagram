@@ -5,7 +5,7 @@
         <%= form.select :category,  options_for_select(@categories, params[:category]), { include_blank: "All" }, onchange: "this.form.requestSubmit()" %>   
     <% end %>
 
-    <%= turbo_frame_tag "featured_rooms" do %>
+    <%= turbo_frame_tag "featured_rooms", target: "_top" do %>
         <div id="rooms">
             <%= render @rooms %>
         </div>
